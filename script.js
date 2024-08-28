@@ -98,7 +98,7 @@ divide.addEventListener('click', () => {
 percent.addEventListener('click', () => {
     const finalMath = comptNumbers.join(''); 
     const numRecebido = eval(finalMath)
-    console.log(numRecebido/100)
+    result.innerHTML = numRecebido/100
 })
 dot.addEventListener('click', () => {
     comptNumbers.push('.')
