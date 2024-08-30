@@ -127,8 +127,10 @@ switchSign.addEventListener('click', () => {
             comptNumbers.splice(i + 1, 0, '-')
             break para
         } else if (comptNumbers[i] == '-') {
-            console.log('Não vai dar pra fzr isso ai não patrão (T_T)')
+            comptNumbers.splice(i, 1, '+')
             break para
+        } else {
+            comptNumbers.splice(i, 0, '-')
         }
     }
     const finalMath = comptNumbers.join('');
