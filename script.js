@@ -127,11 +127,23 @@ switchSign.addEventListener('click', () => {
             comptNumbers.splice(i + 1, 0, '-')
             break para
         } else if (comptNumbers[i] == '-') {
-            comptNumbers.splice(i, 1, '+')
+            comptNumbers.splice(i + 1, 1, '+')
             break para
-        } else {
-            comptNumbers.splice(i, 0, '-')
-        }
+        } else if (comptNumbers[0] == 0 ||
+            comptNumbers[0] == 1 ||
+            comptNumbers[0] == 2 ||
+            comptNumbers[0] == 3 ||
+            comptNumbers[0] == 4 ||
+            comptNumbers[0] == 5 ||
+            comptNumbers[0] == 6 ||
+            comptNumbers[0] == 7 ||
+            comptNumbers[0] == 8 ||
+            comptNumbers[0] == 9 &&
+            !(comptNumbers[0] == '-')) {
+            comptNumbers.splice(i - 1, 0, '-')
+            break para
+        } 
+        console.log(comptNumbers)
     }
     const finalMath = comptNumbers.join('');
     calcList.innerHTML = finalMath
